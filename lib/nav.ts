@@ -2,7 +2,7 @@ export const navLinks = [
   { label: "Les épisodes", href: "/episodes" },
   { label: "L'équipe", href: "/equipe" },
   { label: "Les intervenants", href: "/intervenants" },
-  { label: "Ressources", href: "/ressources" },
+  { label: "Les dossiers", href: "/ressources" },
   { label: "Communauté", href: "/communaute" },
   { label: "Actualités", href: "/actualites" },
   { label: "Nos soutiens", href: "/soutenir" },

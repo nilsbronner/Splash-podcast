@@ -4,7 +4,7 @@ import CtaBanner from "@/components/ui/CtaBanner";
 import Ressources from "@/components/sections/Ressources";
 
 export const metadata: Metadata = {
-  title: "Ressources",
+  title: "Les dossiers",
   description:
     "La colonne vertébrale du projet SPLASH : une fiche ressource par épisode, avec références scientifiques, associations et dispositifs d'aide.",
 };

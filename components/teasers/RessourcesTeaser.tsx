@@ -14,11 +14,11 @@ export default function RessourcesTeaser() {
   return (
     <Teaser
       theme="light"
-      eyebrow="Ressources"
+      eyebrow="Les dossiers"
       title="La colonne vertébrale du projet"
       description="Chaque épisode donne naissance à une fiche ressource complète. L'ambition : la plus grande base de ressources francophone sur la santé, l'inclusion et le jeu vidéo."
       href="/ressources"
-      ctaLabel="Découvrir les ressources"
+      ctaLabel="Découvrir les dossiers"
       reverse
       visual={
         <div>
