@@ -3,6 +3,7 @@ import { Anton, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
+import MiniFooter from "@/components/ui/MiniFooter";
 
 const anton = Anton({
   subsets: ["latin"],
@@ -70,6 +71,7 @@ export default function RootLayout({
         </a>
         <Navbar />
         <main id="main-content">{children}</main>
+        <MiniFooter />
         <Footer />
       </body>
     </html>

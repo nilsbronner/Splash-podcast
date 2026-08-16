@@ -5,7 +5,7 @@ import { footerLinks } from "@/lib/nav";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-ink text-white">
+    <footer id="site-footer" className="border-t border-white/10 bg-ink text-white">
       <Container className="py-16">
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr]">
           <div>
