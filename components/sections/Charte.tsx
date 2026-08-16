@@ -1,4 +1,6 @@
+import { FileText } from "lucide-react";
 import Section from "@/components/ui/Section";
+import Badge from "@/components/ui/Badge";
 
 export default function Charte() {
   return (
@@ -36,6 +38,21 @@ export default function Charte() {
             fondamentaux : le respect de l&apos;adversaire, l&apos;inclusion et la mixité et une
             pratique responsable.
           </p>
+        </div>
+
+        <div className="mt-10 flex flex-col items-start gap-4 rounded-xl3 border border-white/10 bg-white/[0.03] p-8 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-4">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-orange-500/15 text-orange-300">
+              <FileText size={20} />
+            </span>
+            <div>
+              <p className="text-sm font-semibold text-white/90">Texte complet de la Charte</p>
+              <p className="mt-1 text-xs leading-relaxed text-white/50">
+                Les articles détaillés de la Charte #PlayGG sont en cours de finalisation.
+              </p>
+            </div>
+          </div>
+          <Badge tone="neutral">Bientôt disponible</Badge>
         </div>
       </div>
     </Section>
