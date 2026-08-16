@@ -69,7 +69,7 @@ export const episodes: Episode[] = [
     categories: ["Santé", "RSE", "Recherche"],
     guests: "Ex-modérateur communautaire · Chercheur en cyberviolence",
     duration: "50 min",
-    releaseDate: "1er mardi de janvier 2027",
+    releaseDate: "1er mardi du mois",
     available: false,
   },
   {
@@ -81,7 +81,7 @@ export const episodes: Episode[] = [
     categories: ["Management", "Santé", "RSE"],
     guests: "Développeur de jeux vidéo · Consultante RH gaming",
     duration: "58 min",
-    releaseDate: "1er mardi de février 2027",
+    releaseDate: "1er mardi du mois",
     available: false,
   },
   {
@@ -93,7 +93,7 @@ export const episodes: Episode[] = [
     categories: ["Santé", "Inclusion"],
     guests: "Témoignage familial · Addictologue",
     duration: "53 min",
-    releaseDate: "1er mardi de mars 2027",
+    releaseDate: "1er mardi du mois",
     available: false,
   },
 ];
@@ -142,6 +142,12 @@ export const supporters: Supporter[] = [
   {
     name: "Skillcamp",
     description: "Structure porteuse du projet SPLASH.",
+    tier: "partenaires",
+    href: "#",
+  },
+  {
+    name: "Le Grub",
+    description: "Studio de tournage — lieu où est tourné le podcast SPLASH.",
     tier: "partenaires",
     href: "#",
   },
@@ -313,7 +319,7 @@ export const actualites: Actualite[] = [
   {
     id: "splash-strasbourg-esport-days",
     date: "16 août 2026",
-    title: "SPLASH aux Strasbourg Esport Days",
+    title: "Conf Splash aux SED",
     excerpt:
       "Le prochain épisode de SPLASH sera enregistré en public le 6 septembre à 10h, au Palais de la musique et des congrès de Strasbourg.",
     body: [
@@ -321,7 +327,7 @@ export const actualites: Actualite[] = [
       "La mixité des équipes est-elle l'avenir de l'esport ?",
       "Venez assister à l'enregistrement de l'épisode 3 et découvrir la conversation en direct.",
     ],
-    primaryCta: { label: "Venir aux SED", href: "#", external: true },
+    primaryCta: { label: "Venir aux SED", href: "https://www.strasbourg-esport.fr/", external: true },
     secondaryCta: { label: "En savoir plus sur l'épisode 3", href: "/episodes" },
   },
 ];
