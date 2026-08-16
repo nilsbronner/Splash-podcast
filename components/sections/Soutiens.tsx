@@ -1,22 +1,25 @@
+import { clsx } from "clsx";
 import Section from "@/components/ui/Section";
-import Button from "@/components/ui/Button";
 import { supporters, type SupportTier } from "@/lib/data";
 
-const columns: { tier: SupportTier; title: string; description: string }[] = [
+const tiers: { tier: SupportTier; title: string; description: string; cols: string }[] = [
   {
     tier: "sponsors",
     title: "Sponsors",
-    description: "Ils financent le projet.",
+    description: "Ils financent le projet avec un objectif de visibilité.",
+    cols: "sm:grid-cols-2",
   },
   {
     tier: "mecenes",
     title: "Mécènes",
-    description: "Ils soutiennent sans objectif commercial.",
+    description: "Ils soutiennent sans contrepartie commerciale.",
+    cols: "sm:grid-cols-3",
   },
   {
     tier: "partenaires",
     title: "Partenaires",
-    description: "Ils contribuent techniquement ou humainement.",
+    description: "Ils contribuent techniquement ou humainement au projet.",
+    cols: "sm:grid-cols-4",
   },
 ];
 
@@ -29,38 +32,38 @@ export default function Soutiens() {
       title="Ceux qui rendent SPLASH possible"
       description="Trois formes de soutien, trois niveaux d'engagement — que nous choisissons de rendre visibles distinctement, en toute transparence."
     >
-      <div className="grid gap-6 lg:grid-cols-3">
-        {columns.map((col) => {
+      <div className="space-y-14">
+        {tiers.map((col) => {
           const items = supporters.filter((s) => s.tier === col.tier);
           return (
-            <div key={col.tier} className="rounded-xl3 border border-ink/8 bg-white p-7 shadow-sm">
-              <h3 className="font-display text-xl font-semibold">{col.title}</h3>
-              <p className="mt-1 text-sm text-ink/50">{col.description}</p>
+            <div key={col.tier}>
+              <div className="mb-6 flex flex-wrap items-baseline justify-between gap-2 border-b border-ink/8 pb-4">
+                <h3 className="font-display text-xl uppercase tracking-tight text-ink">{col.title}</h3>
+                <p className="text-sm text-ink/50">{col.description}</p>
+              </div>
 
-              <div className="mt-6 space-y-4">
-                {items.length > 0 ? (
-                  items.map((item) => (
+              {items.length > 0 ? (
+                <div className={clsx("grid grid-cols-2 gap-5", col.cols)}>
+                  {items.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="focus-ring block rounded-xl2 border border-ink/8 p-4 transition-colors hover:border-orange-400/50 hover:bg-orange-50/40"
+                      className="focus-ring group flex aspect-[3/2] flex-col items-center justify-center gap-2 rounded-xl2 border border-ink/8 bg-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-orange-400/40 hover:shadow-md"
                     >
-                      <p className="font-semibold text-ink">{item.name}</p>
-                      <p className="mt-1 text-xs leading-relaxed text-ink/55">{item.description}</p>
+                      <p className="font-display text-lg uppercase leading-tight tracking-tight text-ink">
+                        {item.name}
+                      </p>
+                      <p className="text-xs leading-relaxed text-ink/50">{item.description}</p>
                     </a>
-                  ))
-                ) : (
-                  <div className="rounded-xl2 border border-dashed border-ink/15 p-6 text-center">
-                    <p className="text-sm text-ink/50">
-                      Cette place est libre. Soyez les premiers à la rejoindre.
-                    </p>
-                  </div>
-                )}
-              </div>
-
-              <Button href="#participer" variant="dark" size="md" className="mt-6 w-full">
-                Devenir {col.title.toLowerCase().replace(/s$/, "")}
-              </Button>
+                  ))}
+                </div>
+              ) : (
+                <div className="rounded-xl2 border border-dashed border-ink/15 p-8 text-center">
+                  <p className="text-sm text-ink/50">
+                    Cette place est libre. Soyez les premiers à la rejoindre.
+                  </p>
+                </div>
+              )}
             </div>
           );
         })}
