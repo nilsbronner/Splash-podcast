@@ -1,21 +1,20 @@
 export const navLinks = [
-  { label: "Le projet", href: "/le-projet" },
-  { label: "Le podcast", href: "/podcast" },
   { label: "Les épisodes", href: "/episodes" },
+  { label: "L'équipe", href: "/equipe" },
+  { label: "Les intervenants", href: "/intervenants" },
   { label: "Ressources", href: "/ressources" },
   { label: "Communauté", href: "/communaute" },
-  { label: "RESET", href: "/reset" },
+  { label: "Actualités", href: "/actualites" },
   { label: "Nos soutiens", href: "/soutenir" },
   { label: "Presse", href: "/presse" },
 ];
 
 export const footerLinks = {
   legal: [
+    { label: "La Charte", href: "/charte" },
     { label: "Mentions légales", href: "/mentions-legales" },
     { label: "Politique de confidentialité", href: "/confidentialite" },
     { label: "CGU", href: "/cgu" },
-    { label: "CGV", href: "/cgv" },
-    { label: "Cookies", href: "/cookies" },
     { label: "Contact", href: "/temoigner" },
   ],
   social: [

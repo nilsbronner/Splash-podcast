@@ -32,7 +32,8 @@ export default function Presse() {
 
       <div className="mt-10 flex flex-col items-start gap-4 rounded-xl2 border border-white/10 bg-white/[0.03] p-6 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-white/60">
-          Une question presse, une demande d&apos;interview ou un partenariat média ?
+          Une question presse, une demande d&apos;interview ou un partenariat média ? Contact presse :
+          Lucia.
         </p>
         <Button href="/temoigner" variant="outlineLight">
           <Mail size={16} /> Contacter l&apos;équipe presse

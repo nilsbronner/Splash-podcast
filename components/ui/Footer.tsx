@@ -17,8 +17,9 @@ export default function Footer() {
               className="h-9 w-auto"
             />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
-              Ou comment heal le game. Le média qui rassemble joueurs, professionnels, chercheurs,
-              associations et entreprises autour d&apos;un objectif commun : prendre soin du jeu vidéo.
+              Ça change la vie et le game ! L&apos;onde de soin dans le jeu vidéo : un podcast qui
+              cherche à comprendre ce qui se joue derrière les préjugés et les idées reçues dans le
+              jeu vidéo et l&apos;esport.
             </p>
             <p className="mt-6 text-xs uppercase tracking-wide text-white/40">Un projet porté par</p>
             <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-white/70">

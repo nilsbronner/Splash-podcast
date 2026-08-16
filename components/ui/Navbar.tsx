@@ -46,21 +46,21 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Navigation principale">
+        <nav className="hidden items-center gap-5 xl:flex" aria-label="Navigation principale">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-ink/70 transition-colors hover:text-ink focus-ring"
+              className="whitespace-nowrap text-sm font-medium text-ink/70 transition-colors hover:text-ink focus-ring"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <Button href="/temoigner" variant="secondary" size="md">
-            Témoigner
+            Contact
           </Button>
           <Button
             href="https://discord.gg/splash"
@@ -69,12 +69,12 @@ export default function Navbar() {
             variant="primary"
             size="md"
           >
-            Rejoindre Discord
+            Rejoindre la communauté
           </Button>
         </div>
 
         <button
-          className="focus-ring rounded-lg p-2 text-ink lg:hidden"
+          className="focus-ring rounded-lg p-2 text-ink xl:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
@@ -84,7 +84,7 @@ export default function Navbar() {
       </Container>
 
       {open && (
-        <div className="glass-light border-t border-ink/10 lg:hidden">
+        <div className="glass-light border-t border-ink/10 xl:hidden">
           <Container className="flex flex-col gap-1 py-4">
             {navLinks.map((link) => (
               <Link
@@ -98,7 +98,7 @@ export default function Navbar() {
             ))}
             <div className="mt-3 flex flex-col gap-3">
               <Button href="/temoigner" variant="secondary" onClick={() => setOpen(false)}>
-                Témoigner
+                Contact
               </Button>
               <Button
                 href="https://discord.gg/splash"
@@ -107,7 +107,7 @@ export default function Navbar() {
                 variant="primary"
                 onClick={() => setOpen(false)}
               >
-                Rejoindre Discord
+                Rejoindre la communauté
               </Button>
             </div>
           </Container>

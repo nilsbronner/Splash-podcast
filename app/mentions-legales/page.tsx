@@ -5,19 +5,20 @@ export const metadata: Metadata = { title: "Mentions légales" };
 
 export default function MentionsLegales() {
   return (
-    <LegalPage title="Mentions légales" updated="4 août 2026">
+    <LegalPage title="Mentions légales" updated="16 août 2026">
       <p>
         Le site SPLASH est édité par Skillcamp, structure porteuse du projet, en partenariat avec
-        BEMOTION (production audiovisuelle) et RESET (caution scientifique et associative).
+        BEMOTION (production audiovisuelle) et l&apos;association RESET (apport scientifique).
       </p>
 
       <h2>Éditeur du site</h2>
       <p>
-        Skillcamp — [Forme juridique, capital social]
+        Le site SPLASH est édité par Skillcamp Strasbourg Esport, association de droit local régie
+        par les dispositions du Code civil local applicable en Alsace-Moselle.
         <br />
-        Siège social : [Adresse à compléter]
+        Siège social : 8 rue de l&apos;Argonne, 67000 Strasbourg, France
         <br />
-        SIREN : [Numéro à compléter]
+        SIREN : 940 735 251
         <br />
         Directeur de la publication : [Nom à compléter]
         <br />
@@ -38,7 +39,7 @@ export default function MentionsLegales() {
       <ul>
         <li>Skillcamp — structure porteuse</li>
         <li>BEMOTION — partenaire production audiovisuelle</li>
-        <li>RESET — association partenaire, caution scientifique et associative</li>
+        <li>RESET — association partenaire, apport scientifique</li>
       </ul>
     </LegalPage>
   );
