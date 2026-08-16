@@ -9,7 +9,7 @@ export default function Episodes() {
       theme="dark"
       eyebrow="Les épisodes"
       title="Saison 1 — 6 voix, 6 histoires"
-      description="Un nouvel épisode chaque 1er mardi du mois."
+      description="Un nouvel épisode chaque 1er mercredi du mois."
     >
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {episodes.map((ep) => (

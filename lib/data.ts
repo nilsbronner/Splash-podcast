@@ -33,7 +33,7 @@ export const episodes: Episode[] = [
     categories: ["Santé", "Esport", "Recherche"],
     guests: "Témoignage joueur pro · Dr. en psychologie du sport",
     duration: "52 min",
-    releaseDate: "1er mardi d'octobre 2026",
+    releaseDate: "1er mercredi d'octobre 2026",
     available: false,
   },
   {
@@ -45,7 +45,7 @@ export const episodes: Episode[] = [
     categories: ["Handicap", "Inclusion"],
     guests: "Joueur & créateur de contenu · Expert accessibilité",
     duration: "48 min",
-    releaseDate: "1er mardi de novembre 2026",
+    releaseDate: "1er mercredi de novembre 2026",
     available: false,
   },
   {
@@ -57,7 +57,7 @@ export const episodes: Episode[] = [
     categories: ["Diversité", "Esport", "Recherche"],
     guests: "Joueuse compétitive · Sociologue du sport",
     duration: "55 min",
-    releaseDate: "1er mardi de décembre 2026",
+    releaseDate: "1er mercredi de décembre 2026",
     available: false,
   },
   {
@@ -69,7 +69,7 @@ export const episodes: Episode[] = [
     categories: ["Santé", "RSE", "Recherche"],
     guests: "Ex-modérateur communautaire · Chercheur en cyberviolence",
     duration: "50 min",
-    releaseDate: "1er mardi du mois",
+    releaseDate: "1er mercredi du mois",
     available: false,
   },
   {
@@ -81,7 +81,7 @@ export const episodes: Episode[] = [
     categories: ["Management", "Santé", "RSE"],
     guests: "Développeur de jeux vidéo · Consultante RH gaming",
     duration: "58 min",
-    releaseDate: "1er mardi du mois",
+    releaseDate: "1er mercredi du mois",
     available: false,
   },
   {
@@ -93,7 +93,7 @@ export const episodes: Episode[] = [
     categories: ["Santé", "Inclusion"],
     guests: "Témoignage familial · Addictologue",
     duration: "53 min",
-    releaseDate: "1er mardi du mois",
+    releaseDate: "1er mercredi du mois",
     available: false,
   },
 ];

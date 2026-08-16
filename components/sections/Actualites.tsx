@@ -55,7 +55,7 @@ export default function Actualites() {
         <h3 className="font-display text-xl uppercase leading-[0.95] tracking-tight md:text-2xl">
           Calendrier des sorties
         </h3>
-        <p className="mt-2 text-sm text-white/50">Un nouvel épisode chaque 1er mardi du mois.</p>
+        <p className="mt-2 text-sm text-white/50">Un nouvel épisode chaque 1er mercredi du mois.</p>
         <ul className="mt-6 divide-y divide-white/10">
           {episodes.map((ep) => (
             <li key={ep.id} className="flex items-center justify-between gap-4 py-3 text-sm">

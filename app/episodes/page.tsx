@@ -6,7 +6,7 @@ import Episodes from "@/components/sections/Episodes";
 export const metadata: Metadata = {
   title: "Les épisodes",
   description:
-    "Saison 1 — 6 voix, 6 histoires. Un nouvel épisode SPLASH chaque 1er mardi du mois.",
+    "Saison 1 — 6 voix, 6 histoires. Un nouvel épisode SPLASH chaque 1er mercredi du mois.",
 };
 
 export default function EpisodesPage() {
