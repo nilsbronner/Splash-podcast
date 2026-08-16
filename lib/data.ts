@@ -98,9 +98,40 @@ export interface Supporter {
   description: string;
   tier: SupportTier;
   href?: string;
+  placeholder?: boolean;
 }
 
 export const supporters: Supporter[] = [
+  {
+    name: "Votre marque ici",
+    description: "Exemple de sponsor — à remplacer par un partenaire réel.",
+    tier: "sponsors",
+    placeholder: true,
+  },
+  {
+    name: "Votre marque ici",
+    description: "Exemple de sponsor — à remplacer par un partenaire réel.",
+    tier: "sponsors",
+    placeholder: true,
+  },
+  {
+    name: "Fondation exemple",
+    description: "Exemple de mécène — à remplacer par un partenaire réel.",
+    tier: "mecenes",
+    placeholder: true,
+  },
+  {
+    name: "Fondation exemple",
+    description: "Exemple de mécène — à remplacer par un partenaire réel.",
+    tier: "mecenes",
+    placeholder: true,
+  },
+  {
+    name: "Fondation exemple",
+    description: "Exemple de mécène — à remplacer par un partenaire réel.",
+    tier: "mecenes",
+    placeholder: true,
+  },
   {
     name: "Skillcamp",
     description: "Structure porteuse du projet SPLASH.",

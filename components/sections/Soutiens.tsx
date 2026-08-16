@@ -1,6 +1,44 @@
 import { clsx } from "clsx";
 import Section from "@/components/ui/Section";
-import { supporters, type SupportTier } from "@/lib/data";
+import Badge from "@/components/ui/Badge";
+import { supporters, type Supporter, type SupportTier } from "@/lib/data";
+
+function SupporterCard({ item }: { item: Supporter }) {
+  const cardClass = clsx(
+    "focus-ring group relative flex aspect-[3/2] flex-col items-center justify-center gap-2 rounded-xl2 border p-6 text-center shadow-sm transition-all",
+    item.placeholder
+      ? "border-dashed border-ink/15 bg-ink/[0.02]"
+      : "border-ink/8 bg-white hover:-translate-y-1 hover:border-orange-400/40 hover:shadow-md"
+  );
+  const content = (
+    <>
+      {item.placeholder && (
+        <Badge tone="neutral" className="absolute right-3 top-3">
+          Exemple
+        </Badge>
+      )}
+      <p
+        className={clsx(
+          "font-display text-lg uppercase leading-tight tracking-tight",
+          item.placeholder ? "text-ink/40" : "text-ink"
+        )}
+      >
+        {item.name}
+      </p>
+      <p className="text-xs leading-relaxed text-ink/50">{item.description}</p>
+    </>
+  );
+
+  if (item.href) {
+    return (
+      <a href={item.href} className={cardClass}>
+        {content}
+      </a>
+    );
+  }
+
+  return <div className={cardClass}>{content}</div>;
+}
 
 const tiers: { tier: SupportTier; title: string; description: string; cols: string }[] = [
   {
@@ -44,17 +82,8 @@ export default function Soutiens() {
 
               {items.length > 0 ? (
                 <div className={clsx("grid grid-cols-2 gap-5", col.cols)}>
-                  {items.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="focus-ring group flex aspect-[3/2] flex-col items-center justify-center gap-2 rounded-xl2 border border-ink/8 bg-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-orange-400/40 hover:shadow-md"
-                    >
-                      <p className="font-display text-lg uppercase leading-tight tracking-tight text-ink">
-                        {item.name}
-                      </p>
-                      <p className="text-xs leading-relaxed text-ink/50">{item.description}</p>
-                    </a>
+                  {items.map((item, i) => (
+                    <SupporterCard key={`${col.tier}-${item.name}-${i}`} item={item} />
                   ))}
                 </div>
               ) : (
