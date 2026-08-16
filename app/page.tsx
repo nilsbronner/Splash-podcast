@@ -2,7 +2,7 @@ import Hero from "@/components/sections/Hero";
 import PourquoiSplash from "@/components/sections/PourquoiSplash";
 import ActualiteHome from "@/components/sections/ActualiteHome";
 import RessourcesTeaser from "@/components/teasers/RessourcesTeaser";
-import CommunauteTeaser from "@/components/teasers/CommunauteTeaser";
+import Communaute from "@/components/sections/Communaute";
 import CharteHome from "@/components/sections/CharteHome";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <PourquoiSplash />
       <ActualiteHome />
       <RessourcesTeaser />
-      <CommunauteTeaser />
+      <Communaute />
       <CharteHome />
     </>
   );
