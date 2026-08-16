@@ -1,4 +1,4 @@
-import { Download, Mail } from "lucide-react";
+import { Download, FileText, Mail } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import { pressAssets } from "@/lib/data";
@@ -12,6 +12,24 @@ export default function Presse() {
       title="Espace presse"
       description="Retrouvez ici l'ensemble des ressources presse liées au lancement de SPLASH. Le kit complet est en cours de finalisation — contactez-nous en attendant pour tout besoin urgent."
     >
+      <div className="mb-10 flex flex-col items-start gap-4 rounded-xl2 border border-orange-400/30 bg-orange-500/10 p-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center gap-4">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-orange-500/15 text-orange-300">
+            <FileText size={20} />
+          </span>
+          <div>
+            <p className="text-sm font-semibold text-white/90">Les dossiers documentés</p>
+            <p className="mt-1 text-xs leading-relaxed text-white/50">
+              La bibliothèque de ressources par épisode, déjà disponible : sources, associations,
+              dispositifs d&apos;aide et PDF téléchargeable.
+            </p>
+          </div>
+        </div>
+        <Button href="/ressources" variant="outlineLight">
+          Consulter les docs
+        </Button>
+      </div>
+
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {pressAssets.map((asset) => (
           <div

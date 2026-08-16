@@ -20,6 +20,7 @@ export interface Episode {
   guests: string;
   duration: string;
   releaseDate: string;
+  available: boolean;
 }
 
 export const episodes: Episode[] = [
@@ -32,7 +33,8 @@ export const episodes: Episode[] = [
     categories: ["Santé", "Esport", "Recherche"],
     guests: "Témoignage joueur pro · Dr. en psychologie du sport",
     duration: "52 min",
-    releaseDate: "Épisode 1 — Saison 1",
+    releaseDate: "1er mardi d'octobre 2026",
+    available: false,
   },
   {
     id: "inclusion-manettes",
@@ -43,7 +45,8 @@ export const episodes: Episode[] = [
     categories: ["Handicap", "Inclusion"],
     guests: "Joueur & créateur de contenu · Expert accessibilité",
     duration: "48 min",
-    releaseDate: "Épisode 2 — Saison 1",
+    releaseDate: "1er mardi de novembre 2026",
+    available: false,
   },
   {
     id: "mixite-esport",
@@ -54,7 +57,8 @@ export const episodes: Episode[] = [
     categories: ["Diversité", "Esport", "Recherche"],
     guests: "Joueuse compétitive · Sociologue du sport",
     duration: "55 min",
-    releaseDate: "Épisode 3 — Enregistré en public aux Strasbourg Esport Days",
+    releaseDate: "1er mardi de décembre 2026",
+    available: false,
   },
   {
     id: "toxicite-moderation",
@@ -65,7 +69,8 @@ export const episodes: Episode[] = [
     categories: ["Santé", "RSE", "Recherche"],
     guests: "Ex-modérateur communautaire · Chercheur en cyberviolence",
     duration: "50 min",
-    releaseDate: "Épisode 4 — Saison 1",
+    releaseDate: "1er mardi de janvier 2027",
+    available: false,
   },
   {
     id: "management-studios",
@@ -76,7 +81,8 @@ export const episodes: Episode[] = [
     categories: ["Management", "Santé", "RSE"],
     guests: "Développeur de jeux vidéo · Consultante RH gaming",
     duration: "58 min",
-    releaseDate: "Épisode 5 — Saison 1",
+    releaseDate: "1er mardi de février 2027",
+    available: false,
   },
   {
     id: "addiction-familles",
@@ -87,7 +93,8 @@ export const episodes: Episode[] = [
     categories: ["Santé", "Inclusion"],
     guests: "Témoignage familial · Addictologue",
     duration: "53 min",
-    releaseDate: "Épisode 6 — Saison 1",
+    releaseDate: "1er mardi de mars 2027",
+    available: false,
   },
 ];
 
@@ -308,9 +315,9 @@ export const actualites: Actualite[] = [
     date: "16 août 2026",
     title: "SPLASH aux Strasbourg Esport Days",
     excerpt:
-      "Le prochain épisode de SPLASH sera enregistré en public le dimanche 6 septembre à 10h30, au Palais de la musique et des congrès de Strasbourg.",
+      "Le prochain épisode de SPLASH sera enregistré en public le 6 septembre à 10h, au Palais de la musique et des congrès de Strasbourg.",
     body: [
-      "Le prochain épisode de SPLASH sera enregistré en public le dimanche 6 septembre à 10h30, au Palais de la musique et des congrès de Strasbourg, dans le cadre des Strasbourg Esport Days.",
+      "Le prochain épisode de SPLASH sera enregistré en public le 6 septembre à 10h, au Palais de la musique et des congrès de Strasbourg, dans le cadre des Strasbourg Esport Days.",
       "La mixité des équipes est-elle l'avenir de l'esport ?",
       "Venez assister à l'enregistrement de l'épisode 3 et découvrir la conversation en direct.",
     ],

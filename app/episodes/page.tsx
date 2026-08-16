@@ -6,7 +6,7 @@ import Episodes from "@/components/sections/Episodes";
 export const metadata: Metadata = {
   title: "Les épisodes",
   description:
-    "Saison 1 — six voix, six histoires. Filtrez les épisodes SPLASH par thématique : santé, inclusion, esport, handicap, diversité, RSE, recherche, management.",
+    "Saison 1 — 6 voix, 6 histoires. Un nouvel épisode SPLASH chaque 1er mardi du mois.",
 };
 
 export default function EpisodesPage() {

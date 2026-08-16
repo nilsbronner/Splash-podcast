@@ -1,8 +1,9 @@
-import { BookMarked, FlaskConical, HeartHandshake, Wrench, Library } from "lucide-react";
+import { BookMarked, FlaskConical, HeartHandshake, Wrench, Library, FileDown } from "lucide-react";
 import Teaser from "@/components/ui/Teaser";
 import Badge from "@/components/ui/Badge";
 
 const types = [
+  { icon: FileDown, label: "PDF Épisode" },
   { icon: FlaskConical, label: "Références scientifiques" },
   { icon: HeartHandshake, label: "Associations citées" },
   { icon: Library, label: "Dispositifs d'aide" },
@@ -15,7 +16,7 @@ export default function RessourcesTeaser() {
     <Teaser
       theme="light"
       eyebrow="Les docs"
-      title="La colonne vertébrale du projet"
+      title="Les dossiers documentés"
       description="Chaque épisode donne naissance à une fiche ressource complète. L'ambition : la plus grande base de ressources francophone sur la santé, l'inclusion et le jeu vidéo."
       href="/ressources"
       ctaLabel="Découvrir les docs"

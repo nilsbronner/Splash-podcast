@@ -1,7 +1,7 @@
 import { CalendarDays } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
-import { actualites } from "@/lib/data";
+import { actualites, episodes } from "@/lib/data";
 
 export default function Actualites() {
   return (
@@ -50,6 +50,21 @@ export default function Actualites() {
         D&apos;autres actualités suivront à mesure que le projet avance : nouveaux épisodes,
         événements et rendez-vous à venir.
       </p>
+
+      <div className="mt-14 rounded-xl3 border border-white/10 bg-white/[0.03] p-8 md:p-10">
+        <h3 className="font-display text-xl uppercase leading-[0.95] tracking-tight md:text-2xl">
+          Calendrier des sorties
+        </h3>
+        <p className="mt-2 text-sm text-white/50">Un nouvel épisode chaque 1er mardi du mois.</p>
+        <ul className="mt-6 divide-y divide-white/10">
+          {episodes.map((ep) => (
+            <li key={ep.id} className="flex items-center justify-between gap-4 py-3 text-sm">
+              <span className="font-medium text-white/85">Épisode {ep.number}</span>
+              <span className="text-white/50">{ep.releaseDate}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </Section>
   );
 }

@@ -18,8 +18,7 @@ export const footerLinks = {
   ],
   social: [
     { label: "Discord", href: "https://discord.gg/K84WaeSFt" },
-    { label: "LinkedIn", href: "https://linkedin.com/company/splash-media" },
-    { label: "YouTube", href: "https://youtube.com/@splash-media" },
-    { label: "Spotify", href: "https://open.spotify.com/show/splash-media" },
+    { label: "Instagram", href: "#" },
+    { label: "Linktree", href: "#" },
   ],
 };

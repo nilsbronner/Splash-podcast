@@ -1,8 +1,9 @@
-import { BookMarked, FlaskConical, HeartHandshake, Wrench, Library } from "lucide-react";
+import { BookMarked, FlaskConical, HeartHandshake, Wrench, Library, FileDown } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Badge from "@/components/ui/Badge";
 
 const resourceTypes = [
+  { icon: FileDown, label: "PDF Épisode" },
   { icon: FlaskConical, label: "Références scientifiques" },
   { icon: HeartHandshake, label: "Associations citées" },
   { icon: Library, label: "Dispositifs d'aide" },
@@ -16,8 +17,8 @@ export default function Ressources() {
       id="ressources"
       theme="light"
       eyebrow="Les docs"
-      title="La colonne vertébrale du projet"
-      description="Chaque épisode donne naissance à une fiche ressource complète : résumé, sources, associations, dispositifs d'aide et outils cités. L'ambition : construire la plus grande base de ressources francophone sur la santé, l'inclusion et les enjeux sociaux du jeu vidéo."
+      title="Les dossiers documentés"
+      description="Chaque épisode donne naissance à une fiche ressource complète, avec son PDF téléchargeable : résumé, sources, associations, dispositifs d'aide et outils cités. L'ambition : construire la plus grande base de ressources francophone sur la santé, l'inclusion et les enjeux sociaux du jeu vidéo."
     >
       <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
         <div className="grid gap-4 sm:grid-cols-2">

@@ -8,7 +8,7 @@ export default function ActualiteHome() {
   const latest = actualites[0];
 
   return (
-    <Section id="actualites" theme="dark" eyebrow="Actualités" title="Ce qui se passe autour de SPLASH">
+    <Section id="actualites" theme="dark" eyebrow="Actualités" title="Les prochains rdv">
       <div className="rounded-xl3 border border-white/10 bg-white/[0.03] p-8 md:p-12">
         <p className="inline-flex items-center gap-2 rounded-full bg-white/8 px-4 py-1.5 text-xs font-medium text-white/60">
           <CalendarDays size={14} /> {latest.date}
