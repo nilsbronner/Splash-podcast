@@ -18,7 +18,7 @@ export default function EquipePage() {
         title="Une question pour l'équipe ?"
         description="Presse, partenariat, proposition de sujet : contactez-nous directement."
         primary={{ label: "Nous contacter", href: "/temoigner" }}
-        secondary={{ label: "Rejoindre la communauté", href: "https://discord.gg/splash", external: true }}
+        secondary={{ label: "Rejoindre la communauté", href: "https://discord.gg/K84WaeSFt", external: true }}
       />
     </>
   );

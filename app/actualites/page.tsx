@@ -17,7 +17,7 @@ export default function ActualitesPage() {
       <CtaBanner
         title="Ne manquez aucun rendez-vous SPLASH"
         description="Rejoignez la communauté pour être informé·e des prochains enregistrements en public et des sorties d'épisodes."
-        primary={{ label: "Rejoindre la communauté", href: "https://discord.gg/splash", external: true }}
+        primary={{ label: "Rejoindre la communauté", href: "https://discord.gg/K84WaeSFt", external: true }}
         secondary={{ label: "Voir les épisodes", href: "/episodes" }}
       />
     </>

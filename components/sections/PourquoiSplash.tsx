@@ -51,7 +51,7 @@ export default function PourquoiSplash() {
           <Play size={18} /> Voir les épisodes
         </Button>
         <Button
-          href="https://discord.gg/splash"
+          href="https://discord.gg/K84WaeSFt"
           target="_blank"
           rel="noopener noreferrer"
           variant="secondary"

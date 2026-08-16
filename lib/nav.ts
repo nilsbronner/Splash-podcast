@@ -18,7 +18,7 @@ export const footerLinks = {
     { label: "Contact", href: "/temoigner" },
   ],
   social: [
-    { label: "Discord", href: "https://discord.gg/splash" },
+    { label: "Discord", href: "https://discord.gg/K84WaeSFt" },
     { label: "LinkedIn", href: "https://linkedin.com/company/splash-media" },
     { label: "YouTube", href: "https://youtube.com/@splash-media" },
     { label: "Spotify", href: "https://open.spotify.com/show/splash-media" },
