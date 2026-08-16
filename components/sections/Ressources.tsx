@@ -15,7 +15,7 @@ export default function Ressources() {
     <Section
       id="ressources"
       theme="light"
-      eyebrow="Les dossiers"
+      eyebrow="Les docs"
       title="La colonne vertébrale du projet"
       description="Chaque épisode donne naissance à une fiche ressource complète : résumé, sources, associations, dispositifs d'aide et outils cités. L'ambition : construire la plus grande base de ressources francophone sur la santé, l'inclusion et les enjeux sociaux du jeu vidéo."
     >
