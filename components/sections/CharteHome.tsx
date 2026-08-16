@@ -19,8 +19,13 @@ export default function CharteHome() {
         <p className="mt-3 max-w-2xl text-lg leading-relaxed text-white/65">
           C&apos;est cette culture esport que nous voulons partager.
         </p>
-        <Button href="/charte" variant="dark" size="lg" className="mt-8 !bg-white !text-ink hover:!bg-white/90">
-          <FileText size={18} /> Lire la Charte pour un esport responsable
+        <Button
+          href="/charte"
+          variant="dark"
+          size="lg"
+          className="mt-8 w-full !bg-white !text-ink hover:!bg-white/90 sm:w-auto"
+        >
+          <FileText size={18} /> Lire la Charte
         </Button>
       </div>
     </Section>
