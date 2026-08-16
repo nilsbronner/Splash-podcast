@@ -32,35 +32,11 @@ export default function Hero() {
       <Container className="relative z-10 flex min-h-[calc(100svh-6rem)] flex-col justify-center py-16">
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto]">
           <div>
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-8 inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white/70 px-4 py-1.5 text-sm font-medium text-ink/70"
-            >
-              Un projet Skillcamp avec BEMOTION Production et RESET
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-            >
-              <Image
-                src="/brand/logo-wordmark-black.png"
-                alt="SPLASH"
-                width={420}
-                height={165}
-                priority
-                className="h-16 w-auto md:h-24"
-              />
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="mt-6 font-display text-4xl uppercase leading-[0.95] tracking-tight text-ink md:text-6xl"
+              className="font-display text-4xl uppercase leading-[0.95] tracking-tight text-ink md:text-6xl"
             >
               Ça change la vie et le <span className="text-gradient-splash">game</span>
               <span className="text-orange-500">!</span>
