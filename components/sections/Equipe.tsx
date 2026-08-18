@@ -18,10 +18,14 @@ export default function Equipe() {
       description="Les personnes qui conçoivent, produisent, portent et font vivre SPLASH."
     >
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {team.map((member) => (
+        {team.map((member) => {
+          const external = member.href?.startsWith("http");
+          return (
           <a
             key={member.name}
             href={member.href ?? "#"}
+            target={external ? "_blank" : undefined}
+            rel={external ? "noopener noreferrer" : undefined}
             className="focus-ring group flex flex-col gap-4 rounded-xl3 border border-ink/8 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-orange-400/40"
           >
             <span className="flex h-14 w-14 items-center justify-center rounded-full bg-splash-gradient text-lg font-semibold text-white">
@@ -40,7 +44,8 @@ export default function Equipe() {
               En savoir plus <ArrowUpRight size={14} />
             </span>
           </a>
-        ))}
+          );
+        })}
       </div>
     </Section>
   );

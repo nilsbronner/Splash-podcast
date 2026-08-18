@@ -159,9 +159,9 @@ export const supporters: Supporter[] = [
   },
   {
     name: "RESET",
-    description: "Association partenaire, caution scientifique et associative sur les enjeux santé et inclusion.",
+    description: "Association dédiée à la prévention santé dans le numérique, le jeu vidéo et l'e-sport.",
     tier: "partenaires",
-    href: "/equipe",
+    href: "https://reset-association.vercel.app/",
   },
 ];
 
@@ -263,13 +263,13 @@ export const team: TeamMember[] = [
     name: "Olivier",
     org: "RESET",
     role: "Président",
-    href: "#",
+    href: "https://reset-association.vercel.app/",
   },
   {
     name: "Alexandre",
     org: "RESET",
     role: "Animation",
-    href: "#",
+    href: "https://reset-association.vercel.app/",
   },
 ];
 
@@ -285,7 +285,7 @@ export const intervenants: Intervenant[] = [
     name: "Alexandre",
     tags: ["RESET", "Animation", "Psychologie", "Épistémologie"],
     bio: ["Anime les échanges et met en perspective les sujets abordés à l'antenne."],
-    href: "#",
+    href: "https://reset-association.vercel.app/",
   },
   {
     name: "Dr Louis-Marie d'Ussel",

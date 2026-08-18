@@ -12,10 +12,14 @@ export default function Intervenants() {
       description="Les personnes qui participent aux épisodes pour apporter leur vécu ou leur expertise."
     >
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {intervenants.map((person) => (
+        {intervenants.map((person) => {
+          const external = person.href?.startsWith("http");
+          return (
           <a
             key={person.name}
             href={person.href ?? "#"}
+            target={external ? "_blank" : undefined}
+            rel={external ? "noopener noreferrer" : undefined}
             className="focus-ring group flex flex-col gap-4 rounded-xl3 border border-white/10 bg-white/[0.03] p-7 transition-all hover:-translate-y-1 hover:border-orange-400/40"
           >
             <span className="flex h-14 w-14 items-center justify-center rounded-full bg-splash-gradient text-lg font-semibold text-white">
@@ -43,7 +47,8 @@ export default function Intervenants() {
               En savoir plus <ArrowUpRight size={14} />
             </span>
           </a>
-        ))}
+          );
+        })}
       </div>
     </Section>
   );

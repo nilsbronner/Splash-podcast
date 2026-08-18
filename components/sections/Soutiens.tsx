@@ -30,8 +30,14 @@ function SupporterCard({ item }: { item: Supporter }) {
   );
 
   if (item.href) {
+    const external = item.href.startsWith("http");
     return (
-      <a href={item.href} className={cardClass}>
+      <a
+        href={item.href}
+        target={external ? "_blank" : undefined}
+        rel={external ? "noopener noreferrer" : undefined}
+        className={cardClass}
+      >
         {content}
       </a>
     );
