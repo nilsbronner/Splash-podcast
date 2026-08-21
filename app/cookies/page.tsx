@@ -37,7 +37,7 @@ export default function Cookies() {
         <a href="/confidentialite" className="underline hover:text-ink">
           politique de confidentialité
         </a>{" "}
-        ou contactez-nous via le formulaire « Témoigner ».
+        ou contactez-nous via le formulaire « Nous contacter ».
       </p>
     </LegalPage>
   );

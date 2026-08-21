@@ -9,7 +9,7 @@ export default function Confidentialite() {
       <p>
         SPLASH accorde une attention particulière à la protection des données personnelles des
         personnes utilisant le site et, notamment, de celles transmises par l&apos;intermédiaire du
-        formulaire « Témoigner ».
+        formulaire « Nous contacter ».
       </p>
       <p>
         La présente politique explique quelles données peuvent être collectées, pour quelles
@@ -30,7 +30,7 @@ export default function Confidentialite() {
 
       <h2>Données collectées</h2>
       <p>
-        Lorsque vous utilisez le formulaire « Témoigner », SPLASH peut collecter les informations
+        Lorsque vous utilisez le formulaire « Nous contacter », SPLASH peut collecter les informations
         suivantes :
       </p>
       <ul>
@@ -52,7 +52,7 @@ export default function Confidentialite() {
 
       <h2>Témoignages anonymes</h2>
       <p>
-        Lorsque vous choisissez l&apos;option « Témoignage anonyme », votre identité n&apos;est pas
+        Lorsque vous choisissez l&apos;option « Anonyme », votre identité n&apos;est pas
         rendue publique et aucune information permettant de vous identifier n&apos;est publiée sans
         votre accord.
       </p>

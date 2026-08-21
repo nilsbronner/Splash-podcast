@@ -1,4 +1,5 @@
 export const navLinks = [
+  { label: "Le projet", href: "/le-projet" },
   { label: "Les épisodes", href: "/episodes" },
   { label: "Les docs", href: "/ressources" },
   { label: "Actualités", href: "/actualites" },

@@ -3,9 +3,9 @@ import PageHeader from "@/components/ui/PageHeader";
 import Temoigner from "@/components/sections/Temoigner";
 
 export const metadata: Metadata = {
-  title: "Témoigner",
+  title: "Nous contacter",
   description:
-    "Partagez votre histoire, proposez un sujet, signalez un cas, recommandez un invité ou envoyez-nous une initiative. Chaque message est lu par l'équipe éditoriale.",
+    "Une idée, une histoire, une personne, un sujet à proposer ? Besoin de nous parler ? Contactez l'équipe SPLASH, de manière anonyme, privée ou publique.",
 };
 
 export default function TemoignerPage() {

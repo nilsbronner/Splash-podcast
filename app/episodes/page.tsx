@@ -5,8 +5,7 @@ import Episodes from "@/components/sections/Episodes";
 
 export const metadata: Metadata = {
   title: "Les épisodes",
-  description:
-    "Saison 1 — 6 voix, 6 histoires. Un nouvel épisode SPLASH chaque 1er mercredi du mois.",
+  description: "Saison 1. Un nouvel épisode SPLASH le premier mercredi de chaque mois.",
 };
 
 export default function EpisodesPage() {
@@ -15,10 +14,10 @@ export default function EpisodesPage() {
       <PageHeader />
       <Episodes />
       <CtaBanner
-        title="Vous avez une histoire à raconter ?"
-        description="Chaque épisode part d'un témoignage. Le vôtre pourrait être le prochain."
-        primary={{ label: "Témoigner", href: "/temoigner" }}
-        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/K84WaeSFt", external: true }}
+        title="Une idée, une histoire, une personne, un sujet à proposer ?"
+        description="Besoin de nous parler ?"
+        primary={{ label: "Nous contacter", href: "/temoigner" }}
+        secondary={{ label: "Rejoindre notre Discord", href: "https://discord.gg/K84WaeSFt", external: true }}
       />
     </>
   );

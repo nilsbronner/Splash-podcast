@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowDown, Play, MessageCircle } from "lucide-react";
+import { ArrowDown, Play, Info } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 
@@ -62,8 +62,8 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="mt-6 max-w-xl text-lg leading-relaxed text-ink/65"
             >
-              Splash est un podcast qui cherche à comprendre ce qui se joue derrière les préjugés,
-              les stéréotypes et les idées reçues dans le jeu vidéo et l&apos;esport.
+              Splash est un podcast qui s&apos;intéresse à ce qui se joue dans la vraie vie du jeu
+              vidéo et de l&apos;esport.
             </motion.p>
 
             <motion.p
@@ -81,8 +81,8 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="mt-4 max-w-xl text-base leading-relaxed text-ink/65"
             >
-              Joueuses et joueurs échangent avec des professionnels, des chercheurs, des acteurs du
-              secteur. Les désaccords sont explorés, pas exploités.
+              Joueuses et joueurs échangent leurs points de vue avec des professionnels, des
+              chercheurs, des acteurs du secteur. Les différences sont explorées, pas exploitées.
             </motion.p>
 
             <motion.div
@@ -94,14 +94,8 @@ export default function Hero() {
               <Button href="/episodes" size="lg">
                 <Play size={18} /> Voir les épisodes
               </Button>
-              <Button
-                href="https://discord.gg/K84WaeSFt"
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="secondary"
-                size="lg"
-              >
-                <MessageCircle size={18} /> Rejoindre la communauté
+              <Button href="/le-projet" variant="secondary" size="lg">
+                <Info size={18} /> En savoir plus sur le projet
               </Button>
             </motion.div>
           </div>

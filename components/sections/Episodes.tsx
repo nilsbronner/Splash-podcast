@@ -8,8 +8,8 @@ export default function Episodes() {
       id="episodes"
       theme="dark"
       eyebrow="Les épisodes"
-      title="Saison 1 — 6 voix, 6 histoires"
-      description="Un nouvel épisode chaque 1er mercredi du mois."
+      title="Saison 1"
+      description="Un nouvel épisode le premier mercredi de chaque mois."
     >
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {episodes.map((ep) => (
@@ -37,12 +37,12 @@ export default function Episodes() {
             </div>
             <div className="flex flex-1 flex-col p-6">
               <div className="mb-3 flex flex-wrap items-center gap-1.5">
-                {ep.categories.map((c) => (
+                {ep.tags.map((tag) => (
                   <span
-                    key={c}
+                    key={tag}
                     className="rounded-full bg-white/8 px-2.5 py-1 text-[11px] font-medium text-white/60"
                   >
-                    {c}
+                    {tag}
                   </span>
                 ))}
                 {!ep.available && (

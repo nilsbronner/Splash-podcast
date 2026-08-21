@@ -39,7 +39,7 @@ export default function MiniFooter() {
         <span className="h-4 w-px bg-white/15" />
         <p className="text-xs font-medium tracking-wide text-white/60">
           Un projet porté par{" "}
-          <span className="text-white/85">Skillcamp × BEMOTION × RESET</span>
+          <span className="text-white/85">Skillcamp × Bemotion × Reset</span>
         </p>
       </div>
     </div>

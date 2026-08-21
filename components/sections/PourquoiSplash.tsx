@@ -1,11 +1,9 @@
 import Image from "next/image";
-import { MessageCircle, Play } from "lucide-react";
 import Section from "@/components/ui/Section";
-import Button from "@/components/ui/Button";
 
 export default function PourquoiSplash() {
   return (
-    <Section id="pourquoi-splash" theme="light" eyebrow="Le nom SPLASH ?" title="D'où vient ce nom ?">
+    <Section id="pourquoi-splash" theme="light" eyebrow="Le nom SPLASH" title="Pourquoi ce nom ?">
       <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-center">
         <div className="max-w-2xl space-y-5 text-base leading-relaxed text-ink/70">
           <p>Splash trouve son origine dans Fortnite.</p>
@@ -15,8 +13,8 @@ export default function PourquoiSplash() {
             onde dès son impact avec le sol.
           </p>
           <p>
-            Splash entre en contact avec une pensée lisse, trop lisse. Une pensée collective figée
-            dans des idées préconçues, des jugements rapides, des réactions automatiques...
+            Splash entre en contact avec une pensée lisse, trop lisse, figée dans des idées
+            préconçues, des jugements rapides, des réactions automatiques...
           </p>
           <p>
             Splash veut créer une onde pour bousculer les esprits, provoquer l&apos;esprit critique
@@ -44,21 +42,6 @@ export default function PourquoiSplash() {
             />
           </div>
         </div>
-      </div>
-
-      <div className="mt-12 flex flex-wrap items-center gap-4">
-        <Button href="/episodes" size="lg">
-          <Play size={18} /> Voir les épisodes
-        </Button>
-        <Button
-          href="https://discord.gg/K84WaeSFt"
-          target="_blank"
-          rel="noopener noreferrer"
-          variant="secondary"
-          size="lg"
-        >
-          <MessageCircle size={18} /> Rejoindre la communauté
-        </Button>
       </div>
     </Section>
   );

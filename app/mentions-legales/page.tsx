@@ -22,7 +22,7 @@ export default function MentionsLegales() {
         <br />
         Directeur de la publication : [Nom à compléter]
         <br />
-        Contact : via le formulaire « Témoigner » du site.
+        Contact : via le formulaire « Nous contacter » du site.
       </p>
 
       <h2>Hébergement</h2>

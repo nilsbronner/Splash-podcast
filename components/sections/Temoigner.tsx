@@ -1,40 +1,41 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { CheckCircle2, Heart, Lightbulb, Flag, UserPlus, Rocket } from "lucide-react";
+import { CheckCircle2, Heart, Lightbulb, Flag, UserPlus, Rocket, HeartHandshake } from "lucide-react";
 import { clsx } from "clsx";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 
 const reasons = [
-  { value: "histoire", label: "Partager mon histoire", icon: Heart },
+  { value: "histoire", label: "Partager votre histoire", icon: Heart },
   { value: "sujet", label: "Proposer un sujet", icon: Lightbulb },
   { value: "signalement", label: "Signaler un cas", icon: Flag },
   { value: "invite", label: "Recommander un invité", icon: UserPlus },
   { value: "initiative", label: "Envoyer une initiative", icon: Rocket },
+  { value: "confidence", label: "Besoin de vous confier", icon: HeartHandshake },
 ];
 
 const visibilities = [
   {
-    value: "public",
-    label: "Témoignage public",
-    description: "Je suis d'accord pour être cité·e, avec mon accord sur la forme finale.",
-  },
-  {
     value: "anonyme",
-    label: "Témoignage anonyme",
-    description: "Mon histoire peut être partagée mais sans aucune donnée identifiante.",
+    label: "Anonyme",
+    description: "Votre histoire peut être partagée, mais sans aucune donnée permettant de m'identifier.",
   },
   {
-    value: "contact",
-    label: "Simple prise de contact",
-    description: "Je veux juste échanger avec l'équipe, sans obligation de diffusion.",
+    value: "privee",
+    label: "Privée",
+    description: "Vous souhaitez échanger avec l'équipe, sans diffusion de votre témoignage.",
+  },
+  {
+    value: "publique",
+    label: "Publique",
+    description: "Vous acceptez que votre témoignage puisse être diffusé, sous réserve de valider sa forme finale.",
   },
 ];
 
 export default function Temoigner() {
   const [reason, setReason] = useState("histoire");
-  const [visibility, setVisibility] = useState("public");
+  const [visibility, setVisibility] = useState("anonyme");
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -43,13 +44,7 @@ export default function Temoigner() {
   }
 
   return (
-    <Section
-      id="temoigner"
-      theme="light"
-      eyebrow="Le bouton le plus important"
-      title="Témoigner"
-      description="Partagez votre histoire, proposez un sujet, signalez un cas, recommandez un invité ou envoyez-nous une initiative. Chaque message est lu par l'équipe éditoriale."
-    >
+    <Section id="temoigner" theme="light" eyebrow="N'hésitez pas à" title="Nous contacter">
       <div className="mx-auto max-w-2xl rounded-xl3 border border-ink/8 bg-white p-8 shadow-sm md:p-10">
         {submitted ? (
           <div className="flex flex-col items-center gap-4 py-10 text-center" role="status" aria-live="polite">
@@ -68,9 +63,7 @@ export default function Temoigner() {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-8">
             <fieldset>
-              <legend className="mb-4 text-sm font-semibold text-ink">
-                Qu&apos;est-ce qui vous amène ?
-              </legend>
+              <legend className="mb-4 text-sm font-semibold text-ink">Pour :</legend>
               <div className="grid gap-3 sm:grid-cols-2">
                 {reasons.map((r) => (
                   <label
@@ -98,7 +91,7 @@ export default function Temoigner() {
             </fieldset>
 
             <fieldset>
-              <legend className="mb-4 text-sm font-semibold text-ink">Comment souhaitez-vous participer ?</legend>
+              <legend className="mb-4 text-sm font-semibold text-ink">De manière :</legend>
               <div className="grid gap-3">
                 {visibilities.map((v) => (
                   <label
@@ -127,33 +120,36 @@ export default function Temoigner() {
               </div>
             </fieldset>
 
-            <div className="grid gap-5 sm:grid-cols-2">
-              <div>
-                <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">
-                  Nom {visibility === "anonyme" && <span className="text-ink/40">(facultatif)</span>}
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  autoComplete="name"
-                  className="focus-ring w-full rounded-xl2 border border-ink/15 px-4 py-2.5 text-sm outline-none focus:border-orange-500"
-                />
+            <fieldset>
+              <legend className="mb-4 text-sm font-semibold text-ink">Vos coordonnées</legend>
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">
+                    Nom {visibility === "anonyme" && <span className="text-ink/40">(facultatif)</span>}
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autoComplete="name"
+                    className="focus-ring w-full rounded-xl2 border border-ink/15 px-4 py-2.5 text-sm outline-none focus:border-orange-500"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-ink">
+                    Email {visibility !== "anonyme" && <span className="text-red-500">*</span>}
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required={visibility !== "anonyme"}
+                    className="focus-ring w-full rounded-xl2 border border-ink/15 px-4 py-2.5 text-sm outline-none focus:border-orange-500"
+                  />
+                </div>
               </div>
-              <div>
-                <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-ink">
-                  Email {visibility !== "anonyme" && <span className="text-red-500">*</span>}
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required={visibility !== "anonyme"}
-                  className="focus-ring w-full rounded-xl2 border border-ink/15 px-4 py-2.5 text-sm outline-none focus:border-orange-500"
-                />
-              </div>
-            </div>
+            </fieldset>
 
             <div>
               <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-ink">

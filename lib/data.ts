@@ -1,22 +1,9 @@
-export const categories = [
-  "Santé",
-  "Inclusion",
-  "Esport",
-  "Handicap",
-  "Diversité",
-  "RSE",
-  "Recherche",
-  "Management",
-] as const;
-
-export type Category = (typeof categories)[number];
-
 export interface Episode {
   id: string;
   number: number;
+  tags: string[];
   title: string;
   summary: string;
-  categories: Category[];
   guests: string;
   duration: string;
   releaseDate: string;
@@ -25,75 +12,72 @@ export interface Episode {
 
 export const episodes: Episode[] = [
   {
-    id: "burnout-esport",
+    id: "stereotypes-prejuges",
     number: 1,
-    title: "Burnout : quand la passion devient un risque",
+    tags: ["Stéréotypes", "préjugés"],
+    title: "Stéréotypes, préjugés et préjudices",
     summary:
-      "Un joueur pro raconte son épuisement, une chercheuse en psychologie du sport décrypte les mécanismes, et l'équipe ouvre le débat sur la prévention en structure esport.",
-    categories: ["Santé", "Esport", "Recherche"],
-    guests: "Témoignage joueur pro · Dr. en psychologie du sport",
-    duration: "52 min",
-    releaseDate: "1er mercredi d'octobre 2026",
+      "Le premier épisode de Splash sera consacré aux stéréotypes, aux préjugés et aux préjudices liés aux jeux vidéo et à l'esport.",
+    guests: "Aurélien Pelte, joueur · Olivier Luttringer, Président de Reset",
+    duration: "[Durée]",
+    releaseDate: "Premier mercredi d'octobre 2026",
     available: false,
   },
   {
-    id: "inclusion-manettes",
+    id: "addiction-sante",
     number: 2,
-    title: "Le jeu vidéo est-il vraiment pour tout le monde ?",
-    summary:
-      "Handicap et accessibilité : un joueur en situation de handicap partage son quotidien manette en main, un ergonome du jeu vidéo explique les avancées techniques.",
-    categories: ["Handicap", "Inclusion"],
-    guests: "Joueur & créateur de contenu · Expert accessibilité",
-    duration: "48 min",
-    releaseDate: "1er mercredi de novembre 2026",
+    tags: ["Addiction", "Santé"],
+    title: "Quand peut-on parler d'addiction au jeu vidéo ?",
+    summary: "Le deuxième épisode s'intéressera à ce qui se joue derrière une addiction au jeu vidéo.",
+    guests:
+      "Gabriel Fauré, joueur · Dr Louis-Marie d'Ussel, addictologue, responsable médical en addictologie aux Hôpitaux universitaires de Strasbourg",
+    duration: "[Durée]",
+    releaseDate: "Premier mercredi de novembre 2026",
     available: false,
   },
   {
     id: "mixite-esport",
     number: 3,
-    title: "La mixité des équipes est-elle l'avenir de l'esport ?",
+    tags: ["Diversité", "mixité", "joueuses"],
+    title: "La mixité au sein des équipes est-elle un atout pour l'esport ?",
     summary:
       "Enregistré en public aux Strasbourg Esport Days : entre témoignage vécu, données de recherche sur la représentation et pistes concrètes pour les organisations, un état des lieux sans détour.",
-    categories: ["Diversité", "Esport", "Recherche"],
     guests: "Joueuse compétitive · Sociologue du sport",
     duration: "55 min",
-    releaseDate: "1er mercredi de décembre 2026",
+    releaseDate: "Premier mercredi de décembre 2026",
     available: false,
   },
   {
-    id: "toxicite-moderation",
+    id: "episode-4",
     number: 4,
-    title: "Toxicité en ligne : jusqu'où va la responsabilité des studios ?",
-    summary:
-      "Un ancien modérateur témoigne, un chercheur en cyberviolence pose le cadre, et l'équipe interroge les entreprises sur leurs politiques RSE.",
-    categories: ["Santé", "RSE", "Recherche"],
-    guests: "Ex-modérateur communautaire · Chercheur en cyberviolence",
-    duration: "50 min",
-    releaseDate: "1er mercredi du mois",
+    tags: ["À venir"],
+    title: "[Titre de l'épisode]",
+    summary: "[Présentation de l'épisode]",
+    guests: "[Intervenants]",
+    duration: "[Durée]",
+    releaseDate: "Premier mercredi de janvier 2027",
     available: false,
   },
   {
-    id: "management-studios",
+    id: "episode-5",
     number: 5,
-    title: "Crunch : peut-on encore faire des jeux sans s'épuiser ?",
-    summary:
-      "Un développeur revient sur une période de crunch, une consultante RH spécialisée jeu vidéo propose des modèles alternatifs de management.",
-    categories: ["Management", "Santé", "RSE"],
-    guests: "Développeur de jeux vidéo · Consultante RH gaming",
-    duration: "58 min",
-    releaseDate: "1er mercredi du mois",
+    tags: ["À venir"],
+    title: "[Titre de l'épisode]",
+    summary: "[Présentation de l'épisode]",
+    guests: "[Intervenants]",
+    duration: "[Durée]",
+    releaseDate: "Premier mercredi de février 2027",
     available: false,
   },
   {
-    id: "addiction-familles",
+    id: "episode-6",
     number: 6,
-    title: "Addiction : ce que les familles ne savent pas toujours dire",
-    summary:
-      "Un témoignage familial fort, un addictologue spécialisé écrans, et une ouverture sur les dispositifs d'aide existants en France.",
-    categories: ["Santé", "Inclusion"],
-    guests: "Témoignage familial · Addictologue",
-    duration: "53 min",
-    releaseDate: "1er mercredi du mois",
+    tags: ["À venir"],
+    title: "[Titre de l'épisode]",
+    summary: "[Présentation de l'épisode]",
+    guests: "[Intervenants]",
+    duration: "[Durée]",
+    releaseDate: "Premier mercredi de mars 2027",
     available: false,
   },
 ];
@@ -152,13 +136,13 @@ export const supporters: Supporter[] = [
     href: "#",
   },
   {
-    name: "BEMOTION",
+    name: "Bemotion",
     description: "Partenaire production audiovisuelle : podcast, plateau, direction artistique vidéo.",
     tier: "partenaires",
     href: "#",
   },
   {
-    name: "RESET",
+    name: "Reset",
     description: "Association dédiée à la prévention santé dans le numérique, le jeu vidéo et l'e-sport.",
     tier: "partenaires",
     href: "https://reset-association.vercel.app/",
@@ -235,7 +219,7 @@ export const pressAssets: PressAsset[] = [
 
 export interface TeamMember {
   name: string;
-  org: "Skillcamp" | "BEMOTION" | "RESET";
+  org: "Skillcamp" | "Bemotion" | "Reset";
   role: string;
   href?: string;
 }
@@ -249,25 +233,25 @@ export const team: TeamMember[] = [
   },
   {
     name: "Nils",
-    org: "BEMOTION",
+    org: "Bemotion",
     role: "Production",
     href: "#",
   },
   {
     name: "Matteo",
-    org: "BEMOTION",
+    org: "Bemotion",
     role: "Production",
     href: "#",
   },
   {
     name: "Olivier",
-    org: "RESET",
+    org: "Reset",
     role: "Président",
     href: "https://reset-association.vercel.app/",
   },
   {
     name: "Alexandre",
-    org: "RESET",
+    org: "Reset",
     role: "Animation",
     href: "https://reset-association.vercel.app/",
   },
@@ -283,7 +267,7 @@ export interface Intervenant {
 export const intervenants: Intervenant[] = [
   {
     name: "Alexandre",
-    tags: ["RESET", "Animation", "Psychologie", "Épistémologie"],
+    tags: ["Reset", "Animation", "Psychologie", "Épistémologie"],
     bio: ["Anime les échanges et met en perspective les sujets abordés à l'antenne."],
     href: "https://reset-association.vercel.app/",
   },
@@ -309,25 +293,26 @@ export interface Actualite {
   id: string;
   date: string;
   title: string;
-  excerpt: string;
   body: string[];
+  question: string;
+  homeClosing: string;
+  pageClosing: string;
   primaryCta: { label: string; href: string; external?: boolean };
-  secondaryCta: { label: string; href: string };
+  secondaryCta: { label: string; href: string; external?: boolean };
 }
 
 export const actualites: Actualite[] = [
   {
     id: "splash-strasbourg-esport-days",
-    date: "16 août 2026",
-    title: "Conf Splash aux SED",
-    excerpt:
-      "Le prochain épisode de SPLASH sera enregistré en public le 6 septembre à 10h, au Palais de la musique et des congrès de Strasbourg.",
+    date: "6 septembre 2026",
+    title: "Enregistrement public de Splash aux SED",
     body: [
-      "Le prochain épisode de SPLASH sera enregistré en public le 6 septembre à 10h, au Palais de la musique et des congrès de Strasbourg, dans le cadre des Strasbourg Esport Days.",
-      "La mixité des équipes est-elle l'avenir de l'esport ?",
-      "Venez assister à l'enregistrement de l'épisode 3 et découvrir la conversation en direct.",
+      "Le troisième épisode de SPLASH sera enregistré en public le 6 septembre à 10h, au Palais de la musique et des congrès de Strasbourg, dans le cadre des Strasbourg Esport Days.",
     ],
-    primaryCta: { label: "Venir aux SED", href: "https://www.strasbourg-esport.fr/", external: true },
-    secondaryCta: { label: "En savoir plus sur l'épisode 3", href: "/episodes" },
+    question: "La mixité des équipes est-elle un atout pour l'esport ?",
+    homeClosing: "Venez assister au débat en direct et poser vos questions.",
+    pageClosing: "Venez assister à l'enregistrement de l'épisode 3 et découvrir la conversation en direct.",
+    primaryCta: { label: "En savoir plus sur l'épisode 3", href: "/episodes" },
+    secondaryCta: { label: "Venir aux SED", href: "https://www.strasbourg-esport.fr/", external: true },
   },
 ];

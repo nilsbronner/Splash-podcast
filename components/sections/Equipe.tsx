@@ -4,8 +4,8 @@ import { team } from "@/lib/data";
 
 const orgTone: Record<string, string> = {
   Skillcamp: "bg-orange-50 text-orange-700",
-  BEMOTION: "bg-violet-50 text-violet-700",
-  RESET: "bg-ink/5 text-ink/60",
+  Bemotion: "bg-violet-50 text-violet-700",
+  Reset: "bg-ink/5 text-ink/60",
 };
 
 export default function Equipe() {
